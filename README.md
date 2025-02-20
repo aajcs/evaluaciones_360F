@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 360Feedback - [Alfredo Castillo]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+Este proyecto es una aplicación web para realizar evaluaciones 360 grados de empleados remotos, desarrollada como parte de una prueba técnica para Nolotech.  
+La aplicación permite a empleados y managers llevar a cabo evaluaciones de desempeño, generando reportes y retroalimentación integral.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Registro e inicio de sesión de usuarios con roles (Admin, Manager, Employee).
+- Creación y edición de evaluaciones.
+- Evaluación de empleados por colegas y autoevaluación.
+- Visualización de resultados mediante gráficos y tablas.
+- Generación de reportes de evaluación para empleados.
+- Envío de feedback para evaluaciones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologías
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React
+- **Backend:** Node.js con Express.js
+- **Base de Datos:** MongoDB (con Mongoose)
 
-### `npm test`
+## Instalación
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clona el repositorio:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/aajcs/evaluaciones_360.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Instala las dependencias:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Configura las variables de entorno:
 
-### `npm run eject`
+   - Crea un archivo [.env](http://_vscodecontentref_/0) en las carpetas `backend` y `frontend`.
+   - Añade las variables necesarias (puedes ver el ejemplo en [.env.example](http://_vscodecontentref_/1)).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Inicia la aplicación:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   backend
+   npm start
+   frontend
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Estructura del Proyecto
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **backend/**: Código del servidor Node.js y Express.js.
+- **frontend/**: Código de la aplicación React.
+- **docs/**: Diagrama de la base de datos y otros documentos relevantes.
 
-## Learn More
+## Decisiones de Diseño
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Explicar las decisiones clave de diseño, como la estructura de la API y la gestión de estado en el frontend.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Despliegue
 
-### Code Splitting
+FrontEnd
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- https://360feedback-tau.vercel.app/
+  BackEnd
+  https://api-360feedback-aa3c087647eb.herokuapp.com/
 
-### Analyzing the Bundle Size
+usuario administrador
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+admin@correo.com
+123456
 
-### Making a Progressive Web App
+## Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Alfredo Castillo - ing.alfredoacastillo@gmail.com - https://github.com/aajcs
