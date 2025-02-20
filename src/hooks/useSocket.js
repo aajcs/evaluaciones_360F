@@ -4,35 +4,34 @@ import io from "socket.io-client";
 export const useSocket = (serverPath) => {
   const [online, setOnline] = useState(false);
   const [socket, setSocket] = useState(null);
+
   const conectarSocket = useCallback(() => {
+    const token = localStorage.getItem("token");
     const socketTemp = io.connect(serverPath, {
       transports: ["websocket"],
       autoConnect: true,
       forceNew: true,
+      query: {
+        "x-token": token,
+      },
     });
     setSocket(socketTemp);
   }, [serverPath]);
+
   const desconectarSocket = useCallback(() => {
     socket?.disconnect();
   }, [socket]);
 
   useEffect(() => {
-    setOnline(socket.connected);
+    setOnline(socket?.connected);
   }, [socket]);
 
   useEffect(() => {
-    socket.on("connect", () => {
-      setOnline(true);
-    });
+    socket?.on("connect", () => setOnline(true));
+  }, [socket]);
 
-    socket.on("disconnect", () => {
-      setOnline(false);
-    });
-
-    return () => {
-      socket.off("connect");
-      socket.off("disconnect");
-    };
+  useEffect(() => {
+    socket?.on("disconnect", () => setOnline(false));
   }, [socket]);
 
   return { socket, online, conectarSocket, desconectarSocket };
