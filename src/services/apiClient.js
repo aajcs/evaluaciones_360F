@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseConfig = {
-  baseURL: "http://localhost:3001/api",
+  baseURL: "https://api-360feedback-aa3c087647eb.herokuapp.com/api",
   headers: {
     "Content-Type": "application/json",
   },

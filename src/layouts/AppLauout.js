@@ -12,7 +12,7 @@ import { Outlet, useNavigate } from "react-router";
 import { AuthContext } from "../auth/AuthContext";
 
 const items = [
-  { key: "1", icon: UserOutlined, label: "Valuaciones", path: "/evaluations" },
+  { key: "1", icon: UserOutlined, label: "Evaluaciones", path: "/evaluations" },
   {
     key: "2",
     icon: VideoCameraOutlined,
@@ -39,25 +39,27 @@ export const AppLayout = ({ auth }) => {
       navigate(item.path);
     }
   };
-  const userMenu = (
-    <Menu>
-      <Menu.Item key="profile" icon={<UserOutlined />}>
-        Perfil
-      </Menu.Item>
-      <Menu.Item
-        key="logout"
-        icon={<LogoutOutlined />}
-        onClick={() => {
-          // Lógica para cerrar sesión
-          logout();
 
-          // navigate("/login"); // Redirigir a la página de inicio de sesión
-        }}
-      >
-        Cerrar sesión
-      </Menu.Item>
-    </Menu>
-  );
+  const userMenuItems = [
+    {
+      key: "profile",
+      icon: <UserOutlined />,
+      label: "Perfil",
+    },
+    {
+      key: "logout",
+      icon: <LogoutOutlined />,
+      label: "Cerrar sesión",
+      onClick: () => {
+        logout();
+      },
+    },
+  ];
+
+  const userMenu = {
+    items: userMenuItems,
+  };
+
   return (
     <Layout>
       <Header
@@ -68,7 +70,6 @@ export const AppLayout = ({ auth }) => {
           height: "3rem",
           lineHeight: "3rem",
           zIndex: 1000,
-          // background: colorBgContainer,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

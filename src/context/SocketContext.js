@@ -8,7 +8,7 @@ export const SocketContext = createContext();
 
 export const SocketProvider = ({ children }) => {
   const { online, socket, conectarSocket, desconectarSocket } = useSocket(
-    "http://localhost:3001"
+    "https://api-360feedback-aa3c087647eb.herokuapp.com"
   );
   const { dispatch } = useContext(ChatContext);
   const { auth } = useContext(AuthContext);

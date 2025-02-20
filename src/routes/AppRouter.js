@@ -19,7 +19,6 @@ export const AppRouter = () => {
   const AuthLayout = () => {
     return (
       <div>
-        <h2>Auth Layout</h2>
         <Outlet /> {/* Renderiza rutas hijas */}
       </div>
     );
